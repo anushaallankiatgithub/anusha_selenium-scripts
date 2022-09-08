@@ -19,7 +19,10 @@ total_col= len(driver.find_elements(By.XPATH,"//table[@name='BookTable']//tr/th"
 print(total_col)
 
 # print  all the booknames by the author named "Mukesh"
+
 for r in range(2,total_rows+1):
         author= driver.find_element(By.XPATH,"//table[@name='BookTable']//tr["+str(r)+"]/td[2]").text
         if author=="Mukesh":
             print(driver.find_element(By.XPATH,"//table[@name='BookTable']//tr["+str(r)+"]/td[1]").text)
+
+driver.quit()
